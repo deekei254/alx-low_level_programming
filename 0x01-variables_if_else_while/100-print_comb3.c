@@ -1,26 +1,18 @@
 #include <stdio.h>
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-int nums;
-int nums1;
 
-for (nums = '0'; nums <= '9'; nums++)
-{
-for (nums1 = '0'; nums1 <= '9'; nums1++)
-{
-putchar(nums);
-putchar(nums1);
-if (nums == '9' && nums1 == '9')
-continue;
+int main() {
+int i, j;
+for (i = 0; i < 9; i++) {
+for (j = i+1; j < 10; j++) {
+putchar('0' + i);
+putchar('0' + j);
+if (i < 8 || j < 9) {
 putchar(',');
+
 putchar(' ');
+
 }
 }
 putchar('\n');
-return (0);
+return 0;
 }
