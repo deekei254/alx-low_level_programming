@@ -6,6 +6,7 @@
  * @b: integer two to be multiplied
  * Return: value of the two multiplied integers
  */
+
 int mul(int a, int b)
 {
 return (a * b);
