@@ -1,22 +1,23 @@
 #include "main.h"
-#include <studio.h>
 
 /**
- * _strcmp - compares two strings
- * @s1: first string
- * @s2: second string
- * Return: size difference of strings
+ * _strncpy - copy two strings only taking n bytes from src
+ * @dest: first string to be added to
+ * @src: second string to be added
+ * @n: number of bites to use from src
+ * Return: concatenated string
  */
 
-int _strcmp(char *s1, char *s2)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int count = 0;
+	char *temp = dest;
 
-	while (*(s1 + count) != '\0' || *(s2 + count) != '\0')
+	for (; n != 0 && *src != '\0'; n--, src++)
 	{
-	if (*(s1 + count) != *(s2 + count))
-	return (*(s1 + count) - *(s2 + count));
-	count++;
+	*temp = *src;
+	temp++;
 	}
-	return (0);
+	for (; n != 0 && *temp != '\0'; n--, temp++)
+	*temp = '\0';
+	return (dest);
 }
