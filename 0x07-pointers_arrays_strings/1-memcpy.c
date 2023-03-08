@@ -8,7 +8,8 @@
  * Return: change pointer
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n)
+
 {
 	int y = 0;
 	int t = n;
